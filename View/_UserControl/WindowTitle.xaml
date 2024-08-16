@@ -75,6 +75,7 @@
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="Transparent"/>
 
         <SolidColorBrush x:Key="Button.Pressed.Background" Color="#ff5050"/>
+        <SolidColorBrush x:Key="Button.Pressed.Foreground" Color="#f0f0f0"/>
         <SolidColorBrush x:Key="Button.Pressed.Border" Color="Transparent"/>
 
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#ADADAD"/>
@@ -113,7 +114,11 @@
     </Grid.ColumnDefinitions>
 
     <StackPanel Grid.Column="0" Orientation="Horizontal">
-      <Image x:Name="WindowIcon" Source="/Asset/Icon.jpg" Width="35" Height="35" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+      <Ellipse Width="35" Height="35" Margin="5,0">
+        <Ellipse.Fill>
+          <ImageBrush x:Name="WindowIcon" ImageSource="/Asset/Icon.jpg" />
+        </Ellipse.Fill>
+      </Ellipse>
       <Label Content="Title" Style="{StaticResource WindowTitle}"/>
     </StackPanel>
 

@@ -18,7 +18,6 @@
     <Grid.RowDefinitions>
       <RowDefinition Height="35"/>
       <RowDefinition/>
-      
     </Grid.RowDefinitions>
 
     <userControl:WindowTitle Grid.Row="0"/>
