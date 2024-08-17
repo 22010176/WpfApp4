@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp4"
         xmlns:userControl="clr-namespace:WpfApp4.View._UserControl"
+        xmlns:view="clr-namespace:WpfApp4.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
@@ -20,6 +21,9 @@
       <RowDefinition/>
     </Grid.RowDefinitions>
 
-    <userControl:WindowTitle Grid.Row="0"/>
+
+    <userControl:WindowTitle Grid.Row="0" Title="My App"/>
+
+    <view:MainContent Grid.Row="1" x:Name="_MainContent"/>
   </Grid>
 </Window>

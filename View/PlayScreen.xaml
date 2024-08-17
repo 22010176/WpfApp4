@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="WpfApp4.View.PlayScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp4.View"
+             xmlns:userControl="clr-namespace:WpfApp4.View._UserControl"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:converter="clr-namespace:WpfApp4.Util.Converter"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+  <UserControl.Resources>
+    <converter:TurnConverter x:Key="TurnConverter"/>
+  </UserControl.Resources>
+  
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="2*"/>
+      <ColumnDefinition Width="1*"/>
+    </Grid.ColumnDefinitions>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+
+    <Grid Grid.Row="0" Grid.ColumnSpan="3" Height="50">
+      <Button Width="50" HorizontalAlignment="Left" Padding="5" Margin="10" Click="Button_Click">
+        <fa:ImageAwesome Icon="Backward"/>
+      </Button>
+    </Grid>
+
+    <!--Player1-->
+    <Grid Grid.Row="1" Grid.Column="0">
+      <userControl:PlayerSide PlayerName="Player 1" />
+    </Grid>
+
+    <!--Board-->
+    <Grid Grid.Row="1" Grid.Column="1">
+      <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+      </Grid.RowDefinitions>
+
+      <Grid Grid.Row="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+          <Label Content="1"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+          <Label Content="2"/>
+        </Grid>
+
+        <Grid Grid.Column="2">
+          <Label Content="3"/>
+        </Grid>
+      </Grid>
+
+      <Grid Grid.Row="1" Grid.RowSpan="2">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <userControl:InsertBox Grid.Row="0" Grid.Column="0" BoxHeight="50" BoxWidth="50"/>
+        <userControl:InsertBox Grid.Row="0" Grid.Column="1" BoxHeight="50" BoxWidth="50"/>
+        <userControl:InsertBox Grid.Row="0" Grid.Column="2" BoxHeight="50" BoxWidth="50"/>
+
+        <userControl:InsertBox Grid.Row="1" Grid.Column="0" BoxHeight="50" BoxWidth="50"/>
+        <userControl:InsertBox Grid.Row="1" Grid.Column="1" BoxHeight="50" BoxWidth="50"/>
+        <userControl:InsertBox Grid.Row="1" Grid.Column="2" BoxHeight="50" BoxWidth="50"/>
+
+        <userControl:InsertBox Grid.Row="2" Grid.Column="0" BoxHeight="50" BoxWidth="50"/>
+        <userControl:InsertBox Grid.Row="2" Grid.Column="1" BoxHeight="50" BoxWidth="50"/>
+        <userControl:InsertBox Grid.Row="2" Grid.Column="2" BoxHeight="50" BoxWidth="50"/>
+      </Grid>
+    </Grid>
+
+    <!--Player2-->
+    <Grid Grid.Row="1" Grid.Column="2">
+      <!--
+      <userControl:PlayerSide PlayerName="Player 2" IsPlayerTurn="{Binding Player2Turn,Mode=OneTime,NotifyOnSourceUpdated=True}"/>
+      -->
+    </Grid>
+  </Grid>
+</UserControl>

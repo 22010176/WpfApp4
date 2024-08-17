@@ -18,7 +18,7 @@
     <Style TargetType="Button" x:Key="WindowBtn">
       <Setter Property="Width" Value="55"/>
       <Setter Property="Height" Value="35"/>
-      <Setter Property="Padding" Value="12"/>
+      <Setter Property="Padding" Value="13"/>
       <Setter Property="Background" Value="Transparent"/>
       <Setter Property="VerticalContentAlignment" Value="Center"/>
       <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -27,7 +27,7 @@
     <Style TargetType="CheckBox" x:Key="WindowBtnCheck">
       <Setter Property="Width" Value="55"/>
       <Setter Property="Height" Value="35"/>
-      <Setter Property="FontSize" Value="13"/>
+      <Setter Property="FontSize" Value="12"/>
       <Setter Property="Background" Value="Transparent"/>
       <Setter Property="VerticalContentAlignment" Value="Center"/>
       <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -114,16 +114,17 @@
     </Grid.ColumnDefinitions>
 
     <StackPanel Grid.Column="0" Orientation="Horizontal">
-      <Ellipse Width="35" Height="35" Margin="5,0">
+      <Ellipse Width="30" Height="30" Margin="10,0">
         <Ellipse.Fill>
-          <ImageBrush x:Name="WindowIcon" ImageSource="/Asset/Icon.jpg" />
+          <ImageBrush x:Name="WindowIcon" ImageSource="/Asset/Icon.jpg"/>
         </Ellipse.Fill>
       </Ellipse>
-      <Label Content="Title" Style="{StaticResource WindowTitle}"/>
+      
+      <Label Content="{Binding Title}" Style="{StaticResource WindowTitle}"/>
     </StackPanel>
 
     <StackPanel Grid.Column="1" HorizontalAlignment="Left" Orientation="Horizontal">
-      <Button x:Name="MinimizeBtn" Template="{StaticResource WindowButton}" Style="{StaticResource WindowBtn}" Click="MinimizeBtn_Click" Padding="20,12">
+      <Button x:Name="MinimizeBtn" Template="{StaticResource WindowButton}" Style="{StaticResource WindowBtn}" Click="MinimizeBtn_Click" Padding="22,13">
         <fa:ImageAwesome Icon="WindowMinimize" Foreground="Black"/>
       </Button>
 

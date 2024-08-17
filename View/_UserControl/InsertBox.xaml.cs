@@ -13,16 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp4.View
+namespace WpfApp4.View._UserControl
 {
-    /// <summary>
-    /// Interaction logic for FirstWindow.xaml
-    /// </summary>
-    public partial class FirstWindow : UserControl
+  /// <summary>
+  /// Interaction logic for InsertBox.xaml
+  /// </summary>
+  public partial class InsertBox : UserControl
+  {
+    public double BoxWidth { get; set; }
+    public double BoxHeight { get; set; }
+    public int side { get; set; }
+    public InsertBox()
     {
-        public FirstWindow()
-        {
-            InitializeComponent();
-        }
+      InitializeComponent();
+      DataContext = this;
     }
+  }
 }

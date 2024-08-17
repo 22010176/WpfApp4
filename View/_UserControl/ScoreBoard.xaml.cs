@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp4.View
+namespace WpfApp4.View._UserControl
 {
     /// <summary>
-    /// Interaction logic for SecondWindow.xaml
+    /// Interaction logic for ScoreBoard.xaml
     /// </summary>
-    public partial class SecondWindow : UserControl
+    public partial class ScoreBoard : UserControl
     {
-        public SecondWindow()
+        public ScoreBoard()
         {
             InitializeComponent();
         }

@@ -16,9 +16,18 @@ namespace WpfApp4
   /// </summary>
   public partial class MainWindow : Window
   {
+    public static MainWindow GetMainWindow()
+    {
+      return (MainWindow)App.Current.MainWindow;
+    }
     public MainWindow()
     {
       InitializeComponent();
+    }
+
+    private void TestBtm_Click(object sender, RoutedEventArgs e)
+    {
+
     }
   }
 }

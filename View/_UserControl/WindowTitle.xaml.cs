@@ -20,9 +20,11 @@ namespace WpfApp4.View._UserControl
   /// </summary>
   public partial class WindowTitle : UserControl
   {
+    public string Title { get; set; } = "Test";
     public WindowTitle()
     {
       InitializeComponent();
+      DataContext = this;
     }
 
     private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
